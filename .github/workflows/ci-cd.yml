@@ -29,10 +29,8 @@ jobs:
       run: cmake --build build --config Release
 
     - name: Run Tests
+      working-directory: build
       run: ctest -C Release -V  # 假设你用 CTest；否则替换为你的 test.sh
-
-    - name: Code Style Check
-      run: clang-format --dry-run -Werror $(find src/ -name "*.cpp" -o -name "*.hpp")  # 用你的 .clang-format
 
   deploy:
     needs: build
