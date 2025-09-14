@@ -19,6 +19,9 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y cmake g++ libboost-all-dev redis-server libhiredis-dev  # 假设 Redis 用 hiredis；调整为你的依赖
 
+    - name: Clean build directory
+      run: rm -rf build
+
     - name: Configure CMake
       run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 
