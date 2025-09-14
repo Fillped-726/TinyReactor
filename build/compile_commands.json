@@ -1,0 +1,110 @@
+[
+{
+  "directory": "/home/sakura/text/distributed-task-system/build",
+  "command": "/usr/bin/c++ -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/sakura/text/distributed-task-system/src/common/include -I/home/sakura/text/distributed-task-system/build/_deps/hiredis-src -g -std=c++20 -o CMakeFiles/api_server.dir/src/api-server/src/main.cpp.o -c /home/sakura/text/distributed-task-system/src/api-server/src/main.cpp",
+  "file": "/home/sakura/text/distributed-task-system/src/api-server/src/main.cpp",
+  "output": "CMakeFiles/api_server.dir/src/api-server/src/main.cpp.o"
+},
+{
+  "directory": "/home/sakura/text/distributed-task-system/build",
+  "command": "/usr/bin/cc -Dhiredis_EXPORTS -I/home/sakura/text/distributed-task-system/build/_deps/hiredis-src -g -std=gnu99 -fPIC -o _deps/hiredis-build/CMakeFiles/hiredis.dir/alloc.c.o -c /home/sakura/text/distributed-task-system/build/_deps/hiredis-src/alloc.c",
+  "file": "/home/sakura/text/distributed-task-system/build/_deps/hiredis-src/alloc.c",
+  "output": "_deps/hiredis-build/CMakeFiles/hiredis.dir/alloc.c.o"
+},
+{
+  "directory": "/home/sakura/text/distributed-task-system/build",
+  "command": "/usr/bin/cc -Dhiredis_EXPORTS -I/home/sakura/text/distributed-task-system/build/_deps/hiredis-src -g -std=gnu99 -fPIC -o _deps/hiredis-build/CMakeFiles/hiredis.dir/async.c.o -c /home/sakura/text/distributed-task-system/build/_deps/hiredis-src/async.c",
+  "file": "/home/sakura/text/distributed-task-system/build/_deps/hiredis-src/async.c",
+  "output": "_deps/hiredis-build/CMakeFiles/hiredis.dir/async.c.o"
+},
+{
+  "directory": "/home/sakura/text/distributed-task-system/build",
+  "command": "/usr/bin/cc -Dhiredis_EXPORTS -I/home/sakura/text/distributed-task-system/build/_deps/hiredis-src -g -std=gnu99 -fPIC -o _deps/hiredis-build/CMakeFiles/hiredis.dir/hiredis.c.o -c /home/sakura/text/distributed-task-system/build/_deps/hiredis-src/hiredis.c",
+  "file": "/home/sakura/text/distributed-task-system/build/_deps/hiredis-src/hiredis.c",
+  "output": "_deps/hiredis-build/CMakeFiles/hiredis.dir/hiredis.c.o"
+},
+{
+  "directory": "/home/sakura/text/distributed-task-system/build",
+  "command": "/usr/bin/cc -Dhiredis_EXPORTS -I/home/sakura/text/distributed-task-system/build/_deps/hiredis-src -g -std=gnu99 -fPIC -o _deps/hiredis-build/CMakeFiles/hiredis.dir/net.c.o -c /home/sakura/text/distributed-task-system/build/_deps/hiredis-src/net.c",
+  "file": "/home/sakura/text/distributed-task-system/build/_deps/hiredis-src/net.c",
+  "output": "_deps/hiredis-build/CMakeFiles/hiredis.dir/net.c.o"
+},
+{
+  "directory": "/home/sakura/text/distributed-task-system/build",
+  "command": "/usr/bin/cc -Dhiredis_EXPORTS -I/home/sakura/text/distributed-task-system/build/_deps/hiredis-src -g -std=gnu99 -fPIC -o _deps/hiredis-build/CMakeFiles/hiredis.dir/read.c.o -c /home/sakura/text/distributed-task-system/build/_deps/hiredis-src/read.c",
+  "file": "/home/sakura/text/distributed-task-system/build/_deps/hiredis-src/read.c",
+  "output": "_deps/hiredis-build/CMakeFiles/hiredis.dir/read.c.o"
+},
+{
+  "directory": "/home/sakura/text/distributed-task-system/build",
+  "command": "/usr/bin/cc -Dhiredis_EXPORTS -I/home/sakura/text/distributed-task-system/build/_deps/hiredis-src -g -std=gnu99 -fPIC -o _deps/hiredis-build/CMakeFiles/hiredis.dir/sds.c.o -c /home/sakura/text/distributed-task-system/build/_deps/hiredis-src/sds.c",
+  "file": "/home/sakura/text/distributed-task-system/build/_deps/hiredis-src/sds.c",
+  "output": "_deps/hiredis-build/CMakeFiles/hiredis.dir/sds.c.o"
+},
+{
+  "directory": "/home/sakura/text/distributed-task-system/build",
+  "command": "/usr/bin/cc -Dhiredis_EXPORTS -I/home/sakura/text/distributed-task-system/build/_deps/hiredis-src -g -std=gnu99 -fPIC -o _deps/hiredis-build/CMakeFiles/hiredis.dir/sockcompat.c.o -c /home/sakura/text/distributed-task-system/build/_deps/hiredis-src/sockcompat.c",
+  "file": "/home/sakura/text/distributed-task-system/build/_deps/hiredis-src/sockcompat.c",
+  "output": "_deps/hiredis-build/CMakeFiles/hiredis.dir/sockcompat.c.o"
+},
+{
+  "directory": "/home/sakura/text/distributed-task-system/build",
+  "command": "/usr/bin/cc -I/home/sakura/text/distributed-task-system/build/_deps/hiredis-src -g -std=gnu99 -o _deps/hiredis-build/CMakeFiles/hiredis-test.dir/test.c.o -c /home/sakura/text/distributed-task-system/build/_deps/hiredis-src/test.c",
+  "file": "/home/sakura/text/distributed-task-system/build/_deps/hiredis-src/test.c",
+  "output": "_deps/hiredis-build/CMakeFiles/hiredis-test.dir/test.c.o"
+},
+{
+  "directory": "/home/sakura/text/distributed-task-system/build",
+  "command": "/usr/bin/c++ -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgmock_EXPORTS -I/home/sakura/text/distributed-task-system/build/_deps/googletest-src/googlemock/include -I/home/sakura/text/distributed-task-system/build/_deps/googletest-src/googlemock -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest -g -std=c++20 -fPIC -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/home/sakura/text/distributed-task-system/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+},
+{
+  "directory": "/home/sakura/text/distributed-task-system/build",
+  "command": "/usr/bin/c++ -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgmock_main_EXPORTS -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googlemock/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googlemock -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest -g -std=c++20 -fPIC -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/home/sakura/text/distributed-task-system/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
+},
+{
+  "directory": "/home/sakura/text/distributed-task-system/build",
+  "command": "/usr/bin/c++ -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgtest_EXPORTS -I/home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest/include -I/home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest -g -std=c++20 -fPIC -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+},
+{
+  "directory": "/home/sakura/text/distributed-task-system/build",
+  "command": "/usr/bin/c++ -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgtest_main_EXPORTS -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest -g -std=c++20 -fPIC -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+},
+{
+  "directory": "/home/sakura/text/distributed-task-system/build",
+  "command": "/usr/bin/c++ -Dcommon_EXPORTS -I/home/sakura/text/distributed-task-system/src/common/include -g -std=c++20 -fPIC -o src/common/CMakeFiles/common.dir/src/logger.cpp.o -c /home/sakura/text/distributed-task-system/src/common/src/logger.cpp",
+  "file": "/home/sakura/text/distributed-task-system/src/common/src/logger.cpp",
+  "output": "src/common/CMakeFiles/common.dir/src/logger.cpp.o"
+},
+{
+  "directory": "/home/sakura/text/distributed-task-system/build",
+  "command": "/usr/bin/c++ -Dcommon_EXPORTS -I/home/sakura/text/distributed-task-system/src/common/include -g -std=c++20 -fPIC -o src/common/CMakeFiles/common.dir/src/config.cpp.o -c /home/sakura/text/distributed-task-system/src/common/src/config.cpp",
+  "file": "/home/sakura/text/distributed-task-system/src/common/src/config.cpp",
+  "output": "src/common/CMakeFiles/common.dir/src/config.cpp.o"
+},
+{
+  "directory": "/home/sakura/text/distributed-task-system/build",
+  "command": "/usr/bin/c++ -Dcommon_EXPORTS -I/home/sakura/text/distributed-task-system/src/common/include -g -std=c++20 -fPIC -o src/common/CMakeFiles/common.dir/src/utils.cpp.o -c /home/sakura/text/distributed-task-system/src/common/src/utils.cpp",
+  "file": "/home/sakura/text/distributed-task-system/src/common/src/utils.cpp",
+  "output": "src/common/CMakeFiles/common.dir/src/utils.cpp.o"
+},
+{
+  "directory": "/home/sakura/text/distributed-task-system/build",
+  "command": "/usr/bin/c++ -Dcommon_EXPORTS -I/home/sakura/text/distributed-task-system/src/common/include -g -std=c++20 -fPIC -o src/common/CMakeFiles/common.dir/src/exceptions.cpp.o -c /home/sakura/text/distributed-task-system/src/common/src/exceptions.cpp",
+  "file": "/home/sakura/text/distributed-task-system/src/common/src/exceptions.cpp",
+  "output": "src/common/CMakeFiles/common.dir/src/exceptions.cpp.o"
+},
+{
+  "directory": "/home/sakura/text/distributed-task-system/build",
+  "command": "/usr/bin/c++ -I/home/sakura/text/distributed-task-system/src/common/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest -g -std=c++20 -o tests/CMakeFiles/task_test.dir/unit/common-test/task_test.cpp.o -c /home/sakura/text/distributed-task-system/tests/unit/common-test/task_test.cpp",
+  "file": "/home/sakura/text/distributed-task-system/tests/unit/common-test/task_test.cpp",
+  "output": "tests/CMakeFiles/task_test.dir/unit/common-test/task_test.cpp.o"
+}
+]

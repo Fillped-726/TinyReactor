@@ -1,0 +1,46 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cmake g++ libboost-all-dev redis-server libhiredis-dev  # 假设 Redis 用 hiredis；调整为你的依赖
+
+    - name: Configure CMake
+      run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+
+    - name: Build
+      run: cmake --build build --config Release
+
+    - name: Run Tests
+      run: ctest -C Release -V  # 假设你用 CTest；否则替换为你的 test.sh
+
+    - name: Code Style Check
+      run: clang-format --dry-run -Werror $(find src/ -name "*.cpp" -o -name "*.hpp")  # 用你的 .clang-format
+
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main'  # 只在 main 分支 push 时运行 CD
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Build and Push Docker Image  # 示例 CD：构建 Docker 并 push（需配置 secrets.DOCKER_USERNAME 等）
+      run: |
+        docker build -t yourusername/dts:latest .
+        echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+        docker push yourusername/dts:latest
