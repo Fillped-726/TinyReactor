@@ -26,6 +26,7 @@ FetchContent_MakeAvailable(hiredis googletest)
 
 # ---------- 子目录 ----------
 add_subdirectory(src/common)
+add_subdirectory(src/worker/task-executor)
 # add_subdirectory(third_party/quill)
 # add_subdirectory(third_party/cpp-httplib)
 # 其他业务子目录随开随用

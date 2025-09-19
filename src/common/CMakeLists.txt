@@ -10,6 +10,7 @@ add_library(common
     src/config.cpp
     src/utils.cpp
     src/exceptions.cpp
+    src/thread_pool.cpp
 )
 
 # 指定头文件路径

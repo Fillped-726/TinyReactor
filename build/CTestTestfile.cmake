@@ -7,4 +7,5 @@
 subdirs("_deps/hiredis-build")
 subdirs("_deps/googletest-build")
 subdirs("src/common")
+subdirs("src/worker/task-executor")
 subdirs("tests")

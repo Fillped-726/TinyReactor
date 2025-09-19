@@ -419,6 +419,15 @@ GTEST_HAS_ABSL:BOOL=OFF
 // may want to turn this OFF.)
 INSTALL_GTEST:BOOL=ON
 
+//Value Computed by CMake
+TaskExecutor_BINARY_DIR:STATIC=/home/sakura/text/distributed-task-system/build/src/worker/task-executor
+
+//Value Computed by CMake
+TaskExecutor_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+TaskExecutor_SOURCE_DIR:STATIC=/home/sakura/text/distributed-task-system/src/worker/task-executor
+
 //The directory containing a CMake configuration file for boost_atomic.
 boost_atomic_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.83.0
 
@@ -631,7 +640,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

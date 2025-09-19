@@ -1,3 +1,4 @@
 hiredis-test 1 9.80047
 TaskSerializationTest 1 0.00337681
+ThreadPoolTest 2 0.00656084
 ---

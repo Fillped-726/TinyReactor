@@ -950,6 +950,14 @@ build src/common/CMakeFiles/common.dir/src/exceptions.cpp.o: CXX_COMPILER__commo
   OBJECT_DIR = src/common/CMakeFiles/common.dir
   OBJECT_FILE_DIR = src/common/CMakeFiles/common.dir/src
 
+build src/common/CMakeFiles/common.dir/src/thread_pool.cpp.o: CXX_COMPILER__common_unscanned_Debug /home/sakura/text/distributed-task-system/src/common/src/thread_pool.cpp || cmake_object_order_depends_target_common
+  DEFINES = -Dcommon_EXPORTS
+  DEP_FILE = src/common/CMakeFiles/common.dir/src/thread_pool.cpp.o.d
+  FLAGS = -g -std=c++20 -fPIC
+  INCLUDES = -I/home/sakura/text/distributed-task-system/src/common/include
+  OBJECT_DIR = src/common/CMakeFiles/common.dir
+  OBJECT_FILE_DIR = src/common/CMakeFiles/common.dir/src
+
 
 # =============================================================================
 # Link build statements for SHARED_LIBRARY target common
@@ -958,7 +966,7 @@ build src/common/CMakeFiles/common.dir/src/exceptions.cpp.o: CXX_COMPILER__commo
 #############################################
 # Link the shared library src/common/libcommon.so
 
-build src/common/libcommon.so: CXX_SHARED_LIBRARY_LINKER__common_Debug src/common/CMakeFiles/common.dir/src/logger.cpp.o src/common/CMakeFiles/common.dir/src/config.cpp.o src/common/CMakeFiles/common.dir/src/utils.cpp.o src/common/CMakeFiles/common.dir/src/exceptions.cpp.o
+build src/common/libcommon.so: CXX_SHARED_LIBRARY_LINKER__common_Debug src/common/CMakeFiles/common.dir/src/logger.cpp.o src/common/CMakeFiles/common.dir/src/config.cpp.o src/common/CMakeFiles/common.dir/src/utils.cpp.o src/common/CMakeFiles/common.dir/src/exceptions.cpp.o src/common/CMakeFiles/common.dir/src/thread_pool.cpp.o
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = src/common/CMakeFiles/common.dir
   POST_BUILD = :
@@ -1075,6 +1083,164 @@ build src/common/install/strip: phony src/common/CMakeFiles/install/strip.util
 # =============================================================================
 
 # =============================================================================
+# Object build statements for SHARED_LIBRARY target task_executor
+
+
+#############################################
+# Order-only phony target for task_executor
+
+build cmake_object_order_depends_target_task_executor: phony || cmake_object_order_depends_target_common
+
+build src/worker/task-executor/CMakeFiles/task_executor.dir/src/task_executor.cpp.o: CXX_COMPILER__task_executor_unscanned_Debug /home/sakura/text/distributed-task-system/src/worker/task-executor/src/task_executor.cpp || cmake_object_order_depends_target_task_executor
+  DEFINES = -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -Dtask_executor_EXPORTS
+  DEP_FILE = src/worker/task-executor/CMakeFiles/task_executor.dir/src/task_executor.cpp.o.d
+  FLAGS = -g -std=c++20 -fPIC
+  INCLUDES = -I/home/sakura/text/distributed-task-system/src/worker/task-executor/include -I/home/sakura/text/distributed-task-system/src/common/include
+  OBJECT_DIR = src/worker/task-executor/CMakeFiles/task_executor.dir
+  OBJECT_FILE_DIR = src/worker/task-executor/CMakeFiles/task_executor.dir/src
+
+build src/worker/task-executor/CMakeFiles/task_executor.dir/src/task_runner.cpp.o: CXX_COMPILER__task_executor_unscanned_Debug /home/sakura/text/distributed-task-system/src/worker/task-executor/src/task_runner.cpp || cmake_object_order_depends_target_task_executor
+  DEFINES = -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -Dtask_executor_EXPORTS
+  DEP_FILE = src/worker/task-executor/CMakeFiles/task_executor.dir/src/task_runner.cpp.o.d
+  FLAGS = -g -std=c++20 -fPIC
+  INCLUDES = -I/home/sakura/text/distributed-task-system/src/worker/task-executor/include -I/home/sakura/text/distributed-task-system/src/common/include
+  OBJECT_DIR = src/worker/task-executor/CMakeFiles/task_executor.dir
+  OBJECT_FILE_DIR = src/worker/task-executor/CMakeFiles/task_executor.dir/src
+
+build src/worker/task-executor/CMakeFiles/task_executor.dir/src/result_handler.cpp.o: CXX_COMPILER__task_executor_unscanned_Debug /home/sakura/text/distributed-task-system/src/worker/task-executor/src/result_handler.cpp || cmake_object_order_depends_target_task_executor
+  DEFINES = -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -Dtask_executor_EXPORTS
+  DEP_FILE = src/worker/task-executor/CMakeFiles/task_executor.dir/src/result_handler.cpp.o.d
+  FLAGS = -g -std=c++20 -fPIC
+  INCLUDES = -I/home/sakura/text/distributed-task-system/src/worker/task-executor/include -I/home/sakura/text/distributed-task-system/src/common/include
+  OBJECT_DIR = src/worker/task-executor/CMakeFiles/task_executor.dir
+  OBJECT_FILE_DIR = src/worker/task-executor/CMakeFiles/task_executor.dir/src
+
+
+# =============================================================================
+# Link build statements for SHARED_LIBRARY target task_executor
+
+
+#############################################
+# Link the shared library src/worker/task-executor/libtask_executor.so
+
+build src/worker/task-executor/libtask_executor.so: CXX_SHARED_LIBRARY_LINKER__task_executor_Debug src/worker/task-executor/CMakeFiles/task_executor.dir/src/task_executor.cpp.o src/worker/task-executor/CMakeFiles/task_executor.dir/src/task_runner.cpp.o src/worker/task-executor/CMakeFiles/task_executor.dir/src/result_handler.cpp.o | src/common/libcommon.so /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0 || src/common/libcommon.so
+  LANGUAGE_COMPILE_FLAGS = -g
+  LINK_LIBRARIES = -Wl,-rpath,/home/sakura/text/distributed-task-system/build/src/common  src/common/libcommon.so  /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0
+  OBJECT_DIR = src/worker/task-executor/CMakeFiles/task_executor.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  SONAME = libtask_executor.so
+  SONAME_FLAG = -Wl,-soname,
+  TARGET_FILE = src/worker/task-executor/libtask_executor.so
+  TARGET_PDB = task_executor.so.dbg
+
+
+#############################################
+# Utility command for package
+
+build src/worker/task-executor/CMakeFiles/package.util: CUSTOM_COMMAND src/worker/task-executor/all
+  COMMAND = cd /home/sakura/text/distributed-task-system/build && /usr/bin/cpack --config ./CPackConfig.cmake
+  DESC = Run CPack packaging tool...
+  pool = console
+  restat = 1
+
+build src/worker/task-executor/package: phony src/worker/task-executor/CMakeFiles/package.util
+
+
+#############################################
+# Utility command for package_source
+
+build src/worker/task-executor/CMakeFiles/package_source.util: CUSTOM_COMMAND
+  COMMAND = cd /home/sakura/text/distributed-task-system/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/sakura/text/distributed-task-system/build/CPackSourceConfig.cmake
+  DESC = Run CPack packaging tool for source...
+  pool = console
+  restat = 1
+
+build src/worker/task-executor/package_source: phony src/worker/task-executor/CMakeFiles/package_source.util
+
+
+#############################################
+# Utility command for test
+
+build src/worker/task-executor/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/sakura/text/distributed-task-system/build/src/worker/task-executor && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build src/worker/task-executor/test: phony src/worker/task-executor/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build src/worker/task-executor/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/sakura/text/distributed-task-system/build/src/worker/task-executor && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build src/worker/task-executor/edit_cache: phony src/worker/task-executor/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build src/worker/task-executor/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/sakura/text/distributed-task-system/build/src/worker/task-executor && /usr/bin/cmake --regenerate-during-build -S/home/sakura/text/distributed-task-system -B/home/sakura/text/distributed-task-system/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build src/worker/task-executor/rebuild_cache: phony src/worker/task-executor/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build src/worker/task-executor/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build src/worker/task-executor/CMakeFiles/install.util: CUSTOM_COMMAND src/worker/task-executor/all
+  COMMAND = cd /home/sakura/text/distributed-task-system/build/src/worker/task-executor && /usr/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build src/worker/task-executor/install: phony src/worker/task-executor/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build src/worker/task-executor/CMakeFiles/install/local.util: CUSTOM_COMMAND src/worker/task-executor/all
+  COMMAND = cd /home/sakura/text/distributed-task-system/build/src/worker/task-executor && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build src/worker/task-executor/install/local: phony src/worker/task-executor/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build src/worker/task-executor/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/worker/task-executor/all
+  COMMAND = cd /home/sakura/text/distributed-task-system/build/src/worker/task-executor && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build src/worker/task-executor/install/strip: phony src/worker/task-executor/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/sakura/text/distributed-task-system/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
 # Object build statements for EXECUTABLE target task_test
 
 
@@ -1106,6 +1272,73 @@ build tests/task_test: CXX_EXECUTABLE_LINKER__task_test_Debug tests/CMakeFiles/t
   PRE_LINK = :
   TARGET_FILE = tests/task_test
   TARGET_PDB = task_test.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target thread_pool_test
+
+
+#############################################
+# Order-only phony target for thread_pool_test
+
+build cmake_object_order_depends_target_thread_pool_test: phony || cmake_object_order_depends_target_common cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
+
+build tests/CMakeFiles/thread_pool_test.dir/unit/common-test/thread_pool_test.cpp.o: CXX_COMPILER__thread_pool_test_unscanned_Debug /home/sakura/text/distributed-task-system/tests/unit/common-test/thread_pool_test.cpp || cmake_object_order_depends_target_thread_pool_test
+  DEP_FILE = tests/CMakeFiles/thread_pool_test.dir/unit/common-test/thread_pool_test.cpp.o.d
+  FLAGS = -g -std=c++20
+  INCLUDES = -I/home/sakura/text/distributed-task-system/src/common/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest
+  OBJECT_DIR = tests/CMakeFiles/thread_pool_test.dir
+  OBJECT_FILE_DIR = tests/CMakeFiles/thread_pool_test.dir/unit/common-test
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target thread_pool_test
+
+
+#############################################
+# Link the executable tests/thread_pool_test
+
+build tests/thread_pool_test: CXX_EXECUTABLE_LINKER__thread_pool_test_Debug tests/CMakeFiles/thread_pool_test.dir/unit/common-test/thread_pool_test.cpp.o | src/common/libcommon.so lib/libgtest_main.so.1.17.0 lib/libgtest.so.1.17.0 || lib/libgtest.so lib/libgtest_main.so src/common/libcommon.so lib/libgtest_main.so lib/libgtest.so
+  FLAGS = -g
+  LINK_LIBRARIES = -Wl,-rpath,/home/sakura/text/distributed-task-system/build/src/common:/home/sakura/text/distributed-task-system/build/lib  src/common/libcommon.so  lib/libgtest_main.so.1.17.0  lib/libgtest.so.1.17.0
+  OBJECT_DIR = tests/CMakeFiles/thread_pool_test.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = tests/thread_pool_test
+  TARGET_PDB = thread_pool_test.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target task_executor_test
+
+
+#############################################
+# Order-only phony target for task_executor_test
+
+build cmake_object_order_depends_target_task_executor_test: phony || cmake_object_order_depends_target_common cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main cmake_object_order_depends_target_task_executor
+
+build tests/CMakeFiles/task_executor_test.dir/unit/worker-test/task_executor_test.cpp.o: CXX_COMPILER__task_executor_test_unscanned_Debug /home/sakura/text/distributed-task-system/tests/unit/worker-test/task_executor_test.cpp || cmake_object_order_depends_target_task_executor_test
+  DEFINES = -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB
+  DEP_FILE = tests/CMakeFiles/task_executor_test.dir/unit/worker-test/task_executor_test.cpp.o.d
+  FLAGS = -g -std=c++20
+  INCLUDES = -I/home/sakura/text/distributed-task-system/src/worker/task-executor/include -I/home/sakura/text/distributed-task-system/src/common/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest
+  OBJECT_DIR = tests/CMakeFiles/task_executor_test.dir
+  OBJECT_FILE_DIR = tests/CMakeFiles/task_executor_test.dir/unit/worker-test
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target task_executor_test
+
+
+#############################################
+# Link the executable tests/task_executor_test
+
+build tests/task_executor_test: CXX_EXECUTABLE_LINKER__task_executor_test_Debug tests/CMakeFiles/task_executor_test.dir/unit/worker-test/task_executor_test.cpp.o | src/worker/task-executor/libtask_executor.so src/common/libcommon.so /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0 lib/libgtest_main.so.1.17.0 lib/libgtest.so.1.17.0 || lib/libgtest.so lib/libgtest_main.so src/common/libcommon.so src/worker/task-executor/libtask_executor.so lib/libgtest_main.so lib/libgtest.so
+  FLAGS = -g
+  LINK_LIBRARIES = -Wl,-rpath,/home/sakura/text/distributed-task-system/build/src/worker/task-executor:/home/sakura/text/distributed-task-system/build/src/common:/home/sakura/text/distributed-task-system/build/lib  src/worker/task-executor/libtask_executor.so  src/common/libcommon.so  /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0  lib/libgtest_main.so.1.17.0  lib/libgtest.so.1.17.0
+  OBJECT_DIR = tests/CMakeFiles/task_executor_test.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = tests/task_executor_test
+  TARGET_PDB = task_executor_test.dbg
 
 
 #############################################
@@ -1237,7 +1470,15 @@ build libgtest_main.so: phony lib/libgtest_main.so
 
 build libhiredisd.so: phony _deps/hiredis-build/libhiredisd.so
 
+build libtask_executor.so: phony src/worker/task-executor/libtask_executor.so
+
+build task_executor: phony src/worker/task-executor/libtask_executor.so
+
+build task_executor_test: phony tests/task_executor_test
+
 build task_test: phony tests/task_test
+
+build thread_pool_test: phony tests/thread_pool_test
 
 # =============================================================================
 # Folder targets.
@@ -1247,7 +1488,7 @@ build task_test: phony tests/task_test
 #############################################
 # Folder: /home/sakura/text/distributed-task-system/build
 
-build all: phony api_server _deps/hiredis-build/all _deps/googletest-build/all src/common/all tests/all
+build all: phony api_server _deps/hiredis-build/all _deps/googletest-build/all src/common/all src/worker/task-executor/all tests/all
 
 # =============================================================================
 
@@ -1287,9 +1528,16 @@ build src/common/all: phony src/common/libcommon.so
 # =============================================================================
 
 #############################################
+# Folder: /home/sakura/text/distributed-task-system/build/src/worker/task-executor
+
+build src/worker/task-executor/all: phony src/worker/task-executor/libtask_executor.so
+
+# =============================================================================
+
+#############################################
 # Folder: /home/sakura/text/distributed-task-system/build/tests
 
-build tests/all: phony tests/task_test
+build tests/all: phony tests/task_test tests/thread_pool_test tests/task_executor_test
 
 # =============================================================================
 # Built-in targets
@@ -1298,14 +1546,14 @@ build tests/all: phony tests/task_test
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/sakura/text/distributed-task-system/CMakeLists.txt /home/sakura/text/distributed-task-system/src/common/CMakeLists.txt /home/sakura/text/distributed-task-system/tests/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/BoostDetectToolset-1.83.0.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.83.0/boost_atomic-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.83.0/boost_atomic-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.83.0/libboost_atomic-variant-shared.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.83.0/libboost_atomic-variant-static.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.83.0/boost_filesystem-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.83.0/boost_filesystem-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.83.0/libboost_filesystem-variant-shared.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.83.0/libboost_filesystem-variant-static.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.83.0/boost_headers-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.83.0/boost_headers-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/boost_system-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/boost_system-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/libboost_system-variant-shared.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/libboost_system-variant-static.cmake /usr/share/cmake-3.28/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /usr/share/cmake-3.28/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /usr/share/cmake-3.28/Modules/CMakeCInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeDependentOption.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakePackageConfigHelpers.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/CPack.cmake /usr/share/cmake-3.28/Modules/CPackComponent.cmake /usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake /usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake /usr/share/cmake-3.28/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/ExternalProject/shared_internal_commands.cmake /usr/share/cmake-3.28/Modules/FetchContent.cmake /usr/share/cmake-3.28/Modules/FetchContent/CMakeLists.cmake.in /usr/share/cmake-3.28/Modules/FindBoost.cmake /usr/share/cmake-3.28/Modules/FindGit.cmake /usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.28/Modules/FindPackageMessage.cmake /usr/share/cmake-3.28/Modules/FindThreads.cmake /usr/share/cmake-3.28/Modules/GNUInstallDirs.cmake /usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /usr/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake /usr/share/cmake-3.28/Templates/CPackConfig.cmake.in /usr/share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake /usr/share/cmake/nlohmann_json/nlohmann_jsonConfigVersion.cmake /usr/share/cmake/nlohmann_json/nlohmann_jsonTargets.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCCompiler.cmake CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake _deps/hiredis-src/CMakeLists.txt _deps/hiredis-src/hiredis-config.cmake.in _deps/hiredis-src/hiredis.pc.in
+build build.ninja: RERUN_CMAKE | /home/sakura/text/distributed-task-system/CMakeLists.txt /home/sakura/text/distributed-task-system/src/common/CMakeLists.txt /home/sakura/text/distributed-task-system/src/worker/task-executor/CMakeLists.txt /home/sakura/text/distributed-task-system/tests/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/BoostDetectToolset-1.83.0.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.83.0/boost_atomic-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.83.0/boost_atomic-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.83.0/libboost_atomic-variant-shared.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.83.0/libboost_atomic-variant-static.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.83.0/boost_filesystem-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.83.0/boost_filesystem-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.83.0/libboost_filesystem-variant-shared.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.83.0/libboost_filesystem-variant-static.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.83.0/boost_headers-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.83.0/boost_headers-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/boost_system-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/boost_system-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/libboost_system-variant-shared.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/libboost_system-variant-static.cmake /usr/share/cmake-3.28/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /usr/share/cmake-3.28/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /usr/share/cmake-3.28/Modules/CMakeCInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeDependentOption.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakePackageConfigHelpers.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/CPack.cmake /usr/share/cmake-3.28/Modules/CPackComponent.cmake /usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake /usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake /usr/share/cmake-3.28/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/ExternalProject/shared_internal_commands.cmake /usr/share/cmake-3.28/Modules/FetchContent.cmake /usr/share/cmake-3.28/Modules/FetchContent/CMakeLists.cmake.in /usr/share/cmake-3.28/Modules/FindBoost.cmake /usr/share/cmake-3.28/Modules/FindGit.cmake /usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.28/Modules/FindPackageMessage.cmake /usr/share/cmake-3.28/Modules/FindThreads.cmake /usr/share/cmake-3.28/Modules/GNUInstallDirs.cmake /usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /usr/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake /usr/share/cmake-3.28/Templates/CPackConfig.cmake.in /usr/share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake /usr/share/cmake/nlohmann_json/nlohmann_jsonConfigVersion.cmake /usr/share/cmake/nlohmann_json/nlohmann_jsonTargets.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCCompiler.cmake CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake _deps/hiredis-src/CMakeLists.txt _deps/hiredis-src/hiredis-config.cmake.in _deps/hiredis-src/hiredis.pc.in
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/sakura/text/distributed-task-system/CMakeLists.txt /home/sakura/text/distributed-task-system/src/common/CMakeLists.txt /home/sakura/text/distributed-task-system/tests/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/BoostDetectToolset-1.83.0.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.83.0/boost_atomic-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.83.0/boost_atomic-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.83.0/libboost_atomic-variant-shared.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.83.0/libboost_atomic-variant-static.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.83.0/boost_filesystem-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.83.0/boost_filesystem-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.83.0/libboost_filesystem-variant-shared.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.83.0/libboost_filesystem-variant-static.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.83.0/boost_headers-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.83.0/boost_headers-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/boost_system-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/boost_system-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/libboost_system-variant-shared.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/libboost_system-variant-static.cmake /usr/share/cmake-3.28/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /usr/share/cmake-3.28/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /usr/share/cmake-3.28/Modules/CMakeCInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeDependentOption.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakePackageConfigHelpers.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/CPack.cmake /usr/share/cmake-3.28/Modules/CPackComponent.cmake /usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake /usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake /usr/share/cmake-3.28/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/ExternalProject/shared_internal_commands.cmake /usr/share/cmake-3.28/Modules/FetchContent.cmake /usr/share/cmake-3.28/Modules/FetchContent/CMakeLists.cmake.in /usr/share/cmake-3.28/Modules/FindBoost.cmake /usr/share/cmake-3.28/Modules/FindGit.cmake /usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.28/Modules/FindPackageMessage.cmake /usr/share/cmake-3.28/Modules/FindThreads.cmake /usr/share/cmake-3.28/Modules/GNUInstallDirs.cmake /usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /usr/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake /usr/share/cmake-3.28/Templates/CPackConfig.cmake.in /usr/share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake /usr/share/cmake/nlohmann_json/nlohmann_jsonConfigVersion.cmake /usr/share/cmake/nlohmann_json/nlohmann_jsonTargets.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCCompiler.cmake CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake _deps/hiredis-src/CMakeLists.txt _deps/hiredis-src/hiredis-config.cmake.in _deps/hiredis-src/hiredis.pc.in: phony
+build /home/sakura/text/distributed-task-system/CMakeLists.txt /home/sakura/text/distributed-task-system/src/common/CMakeLists.txt /home/sakura/text/distributed-task-system/src/worker/task-executor/CMakeLists.txt /home/sakura/text/distributed-task-system/tests/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/BoostDetectToolset-1.83.0.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.83.0/boost_atomic-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.83.0/boost_atomic-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.83.0/libboost_atomic-variant-shared.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.83.0/libboost_atomic-variant-static.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.83.0/boost_filesystem-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.83.0/boost_filesystem-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.83.0/libboost_filesystem-variant-shared.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.83.0/libboost_filesystem-variant-static.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.83.0/boost_headers-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.83.0/boost_headers-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/boost_system-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/boost_system-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/libboost_system-variant-shared.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/libboost_system-variant-static.cmake /usr/share/cmake-3.28/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /usr/share/cmake-3.28/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /usr/share/cmake-3.28/Modules/CMakeCInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeDependentOption.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakePackageConfigHelpers.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/CPack.cmake /usr/share/cmake-3.28/Modules/CPackComponent.cmake /usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake /usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake /usr/share/cmake-3.28/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/ExternalProject/shared_internal_commands.cmake /usr/share/cmake-3.28/Modules/FetchContent.cmake /usr/share/cmake-3.28/Modules/FetchContent/CMakeLists.cmake.in /usr/share/cmake-3.28/Modules/FindBoost.cmake /usr/share/cmake-3.28/Modules/FindGit.cmake /usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.28/Modules/FindPackageMessage.cmake /usr/share/cmake-3.28/Modules/FindThreads.cmake /usr/share/cmake-3.28/Modules/GNUInstallDirs.cmake /usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /usr/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake /usr/share/cmake-3.28/Templates/CPackConfig.cmake.in /usr/share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake /usr/share/cmake/nlohmann_json/nlohmann_jsonConfigVersion.cmake /usr/share/cmake/nlohmann_json/nlohmann_jsonTargets.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCCompiler.cmake CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake _deps/hiredis-src/CMakeLists.txt _deps/hiredis-src/hiredis-config.cmake.in _deps/hiredis-src/hiredis.pc.in: phony
 
 
 #############################################
