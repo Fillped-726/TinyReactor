@@ -17,7 +17,9 @@ add_library(common
 target_include_directories(common PUBLIC include)
 
 # 链接依赖
-target_link_libraries(common PUBLIC nlohmann_json::nlohmann_json)
+target_link_libraries(common PUBLIC 
+    Boost::system
+    nlohmann_json::nlohmann_json)
 
 # 设置 C++ 标准
 target_compile_features(common PUBLIC cxx_std_20)

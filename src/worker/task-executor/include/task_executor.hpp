@@ -1,3 +1,4 @@
+//task_executor.hpp
 #pragma once
 #include <functional>
 #include <memory>
@@ -5,6 +6,7 @@
 #include <unordered_map>
 #include <boost/asio.hpp>
 #include "task.hpp"
+#include "thread_pool.hpp"
 
 namespace dts {
 
@@ -42,6 +44,7 @@ private:
 
     inline static std::atomic<int> retrying_cnt{0};
     static constexpr int MAX_CONCURRENT_RETRY = 10;
+    ThreadPool thread_pool_;
 };
 
 } // namespace dts

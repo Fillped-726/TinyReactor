@@ -79,31 +79,31 @@
 },
 {
   "directory": "/home/sakura/text/distributed-task-system/build",
-  "command": "/usr/bin/c++ -Dcommon_EXPORTS -I/home/sakura/text/distributed-task-system/src/common/include -g -std=c++20 -fPIC -o src/common/CMakeFiles/common.dir/src/logger.cpp.o -c /home/sakura/text/distributed-task-system/src/common/src/logger.cpp",
+  "command": "/usr/bin/c++ -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -Dcommon_EXPORTS -I/home/sakura/text/distributed-task-system/src/common/include -g -std=c++20 -fPIC -o src/common/CMakeFiles/common.dir/src/logger.cpp.o -c /home/sakura/text/distributed-task-system/src/common/src/logger.cpp",
   "file": "/home/sakura/text/distributed-task-system/src/common/src/logger.cpp",
   "output": "src/common/CMakeFiles/common.dir/src/logger.cpp.o"
 },
 {
   "directory": "/home/sakura/text/distributed-task-system/build",
-  "command": "/usr/bin/c++ -Dcommon_EXPORTS -I/home/sakura/text/distributed-task-system/src/common/include -g -std=c++20 -fPIC -o src/common/CMakeFiles/common.dir/src/config.cpp.o -c /home/sakura/text/distributed-task-system/src/common/src/config.cpp",
+  "command": "/usr/bin/c++ -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -Dcommon_EXPORTS -I/home/sakura/text/distributed-task-system/src/common/include -g -std=c++20 -fPIC -o src/common/CMakeFiles/common.dir/src/config.cpp.o -c /home/sakura/text/distributed-task-system/src/common/src/config.cpp",
   "file": "/home/sakura/text/distributed-task-system/src/common/src/config.cpp",
   "output": "src/common/CMakeFiles/common.dir/src/config.cpp.o"
 },
 {
   "directory": "/home/sakura/text/distributed-task-system/build",
-  "command": "/usr/bin/c++ -Dcommon_EXPORTS -I/home/sakura/text/distributed-task-system/src/common/include -g -std=c++20 -fPIC -o src/common/CMakeFiles/common.dir/src/utils.cpp.o -c /home/sakura/text/distributed-task-system/src/common/src/utils.cpp",
+  "command": "/usr/bin/c++ -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -Dcommon_EXPORTS -I/home/sakura/text/distributed-task-system/src/common/include -g -std=c++20 -fPIC -o src/common/CMakeFiles/common.dir/src/utils.cpp.o -c /home/sakura/text/distributed-task-system/src/common/src/utils.cpp",
   "file": "/home/sakura/text/distributed-task-system/src/common/src/utils.cpp",
   "output": "src/common/CMakeFiles/common.dir/src/utils.cpp.o"
 },
 {
   "directory": "/home/sakura/text/distributed-task-system/build",
-  "command": "/usr/bin/c++ -Dcommon_EXPORTS -I/home/sakura/text/distributed-task-system/src/common/include -g -std=c++20 -fPIC -o src/common/CMakeFiles/common.dir/src/exceptions.cpp.o -c /home/sakura/text/distributed-task-system/src/common/src/exceptions.cpp",
+  "command": "/usr/bin/c++ -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -Dcommon_EXPORTS -I/home/sakura/text/distributed-task-system/src/common/include -g -std=c++20 -fPIC -o src/common/CMakeFiles/common.dir/src/exceptions.cpp.o -c /home/sakura/text/distributed-task-system/src/common/src/exceptions.cpp",
   "file": "/home/sakura/text/distributed-task-system/src/common/src/exceptions.cpp",
   "output": "src/common/CMakeFiles/common.dir/src/exceptions.cpp.o"
 },
 {
   "directory": "/home/sakura/text/distributed-task-system/build",
-  "command": "/usr/bin/c++ -Dcommon_EXPORTS -I/home/sakura/text/distributed-task-system/src/common/include -g -std=c++20 -fPIC -o src/common/CMakeFiles/common.dir/src/thread_pool.cpp.o -c /home/sakura/text/distributed-task-system/src/common/src/thread_pool.cpp",
+  "command": "/usr/bin/c++ -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -Dcommon_EXPORTS -I/home/sakura/text/distributed-task-system/src/common/include -g -std=c++20 -fPIC -o src/common/CMakeFiles/common.dir/src/thread_pool.cpp.o -c /home/sakura/text/distributed-task-system/src/common/src/thread_pool.cpp",
   "file": "/home/sakura/text/distributed-task-system/src/common/src/thread_pool.cpp",
   "output": "src/common/CMakeFiles/common.dir/src/thread_pool.cpp.o"
 },
@@ -127,13 +127,13 @@
 },
 {
   "directory": "/home/sakura/text/distributed-task-system/build",
-  "command": "/usr/bin/c++ -I/home/sakura/text/distributed-task-system/src/common/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest -g -std=c++20 -o tests/CMakeFiles/task_test.dir/unit/common-test/task_test.cpp.o -c /home/sakura/text/distributed-task-system/tests/unit/common-test/task_test.cpp",
+  "command": "/usr/bin/c++ -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/sakura/text/distributed-task-system/src/common/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest -g -std=c++20 -o tests/CMakeFiles/task_test.dir/unit/common-test/task_test.cpp.o -c /home/sakura/text/distributed-task-system/tests/unit/common-test/task_test.cpp",
   "file": "/home/sakura/text/distributed-task-system/tests/unit/common-test/task_test.cpp",
   "output": "tests/CMakeFiles/task_test.dir/unit/common-test/task_test.cpp.o"
 },
 {
   "directory": "/home/sakura/text/distributed-task-system/build",
-  "command": "/usr/bin/c++ -I/home/sakura/text/distributed-task-system/src/common/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest -g -std=c++20 -o tests/CMakeFiles/thread_pool_test.dir/unit/common-test/thread_pool_test.cpp.o -c /home/sakura/text/distributed-task-system/tests/unit/common-test/thread_pool_test.cpp",
+  "command": "/usr/bin/c++ -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/sakura/text/distributed-task-system/src/common/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest -g -std=c++20 -o tests/CMakeFiles/thread_pool_test.dir/unit/common-test/thread_pool_test.cpp.o -c /home/sakura/text/distributed-task-system/tests/unit/common-test/thread_pool_test.cpp",
   "file": "/home/sakura/text/distributed-task-system/tests/unit/common-test/thread_pool_test.cpp",
   "output": "tests/CMakeFiles/thread_pool_test.dir/unit/common-test/thread_pool_test.cpp.o"
 },
@@ -142,5 +142,11 @@
   "command": "/usr/bin/c++ -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/sakura/text/distributed-task-system/src/worker/task-executor/include -I/home/sakura/text/distributed-task-system/src/common/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest -g -std=c++20 -o tests/CMakeFiles/task_executor_test.dir/unit/worker-test/task_executor_test.cpp.o -c /home/sakura/text/distributed-task-system/tests/unit/worker-test/task_executor_test.cpp",
   "file": "/home/sakura/text/distributed-task-system/tests/unit/worker-test/task_executor_test.cpp",
   "output": "tests/CMakeFiles/task_executor_test.dir/unit/worker-test/task_executor_test.cpp.o"
+},
+{
+  "directory": "/home/sakura/text/distributed-task-system/build",
+  "command": "/usr/bin/c++ -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/sakura/text/distributed-task-system/src/common/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest -g -std=c++20 -o tests/CMakeFiles/hazptr_test.dir/unit/common-test/hazptr_test.cpp.o -c /home/sakura/text/distributed-task-system/tests/unit/common-test/hazptr_test.cpp",
+  "file": "/home/sakura/text/distributed-task-system/tests/unit/common-test/hazptr_test.cpp",
+  "output": "tests/CMakeFiles/hazptr_test.dir/unit/common-test/hazptr_test.cpp.o"
 }
 ]

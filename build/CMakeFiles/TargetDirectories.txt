@@ -73,6 +73,7 @@
 /home/sakura/text/distributed-task-system/build/tests/CMakeFiles/task_test.dir
 /home/sakura/text/distributed-task-system/build/tests/CMakeFiles/thread_pool_test.dir
 /home/sakura/text/distributed-task-system/build/tests/CMakeFiles/task_executor_test.dir
+/home/sakura/text/distributed-task-system/build/tests/CMakeFiles/hazptr_test.dir
 /home/sakura/text/distributed-task-system/build/tests/CMakeFiles/package.dir
 /home/sakura/text/distributed-task-system/build/tests/CMakeFiles/package_source.dir
 /home/sakura/text/distributed-task-system/build/tests/CMakeFiles/test.dir

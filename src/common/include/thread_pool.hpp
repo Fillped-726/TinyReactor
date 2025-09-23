@@ -1,77 +1,58 @@
-#ifndef COMMON_THREAD_POOL_THREAD_POOL_HPP_
-#define COMMON_THREAD_POOL_THREAD_POOL_HPP_
+// thread_pool.hpp
+#pragma once
 
 #include <atomic>
-#include <condition_variable>
 #include <functional>
-#include <future>
-#include <mutex>
-#include <queue>
 #include <thread>
 #include <vector>
+#include <boost/lockfree/queue.hpp>
 
 namespace dts {
 
 class ThreadPool {
- public:
-  /* 构造与析构 */
-  explicit ThreadPool(size_t thread_num);
-  ~ThreadPool() noexcept;
+public:
+    // 构造函数：指定线程数和队列容量
+    explicit ThreadPool(size_t num_threads, size_t queue_capacity = 1024);
+    // 析构函数：停止并join所有线程
+    ~ThreadPool();
 
-  /* 禁止拷贝与移动 */
-  ThreadPool(const ThreadPool&) = delete;
-  ThreadPool& operator=(const ThreadPool&) = delete;
-  ThreadPool(ThreadPool&&) = delete;
-  ThreadPool& operator=(ThreadPool&&) = delete;
+    // 入队任务：将std::function<void()>类型的任务添加到队列
+    void enqueue(std::function<void()> task);
 
-  /* 任务提交接口 */
-  template <typename F, typename... Args>
-  auto enqueue(F&& f, Args&&... args) -> std::future<decltype(f(args...))>;
+    // 动态添加线程
+    void add_threads(size_t num_threads);
 
-  /* 生命周期管理 */
-  void stop() noexcept;
-  void join_all() noexcept;
+    // 尝试移除线程：优雅退出空闲线程
+    void remove_threads(size_t num_threads);
 
-  /* 统计接口 */
-  int get_task_count() const noexcept;
-  int get_completed_count() const noexcept;
+    // 获取当前活跃线程数
+    size_t get_thread_count() const;
 
- private:
+    //获取残留任务数
+    size_t get_tasks_left() const;
 
-  /* 成员变量 */
-  std::vector<std::thread> workers_;
-  std::queue<std::function<void()>> tasks_;
-  mutable std::mutex queue_mutex_;
-  std::condition_variable condition_;
-  std::atomic<bool> stop_{false};
-  std::atomic<int> task_count_{0};
-  std::atomic<int> completed_count_{0};
+    //主动结束线程池
+    void shutdown();
+
+private:
+    // 工作线程函数：不断从队列取任务执行
+    void worker();
+
+    // 任务队列：使用Boost无锁队列，存储任务指针
+    boost::lockfree::queue<std::function<void()>*> queue_;
+    // 线程容器：使用std::jthread（C++20）
+    std::vector<std::jthread> threads_;
+    // 停止标志：原子变量
+    std::atomic<bool> stop_{false};
+    // 活跃线程数：原子计数
+    std::atomic<size_t> active_threads_{0};
+    // 目标线程数：用于动态调整
+    std::atomic<size_t> target_thread_count_{0};
+
+    //信号量
+    std::binary_semaphore task_sem_{0};
+    //残留任务数   
+    std::atomic<std::size_t> leftover_{0};
 };
 
-/* 模板定义需放在头文件中 */
-template <typename F, typename... Args>
-auto ThreadPool::enqueue(F&& f, Args&&... args)
-    -> std::future<decltype(f(args...))> {
-  using RetType = std::invoke_result_t<F, Args...>;
-
-  auto task = std::make_shared<std::packaged_task<RetType()>>(
-      std::bind(std::forward<F>(f), std::forward<Args>(args)...));
-
-  std::future<RetType> future = task->get_future();
-
-  {
-    std::lock_guard<std::mutex> lock(queue_mutex_);
-    if (stop_) {
-      throw std::runtime_error("enqueue on stopped ThreadPool");
-    }
-    tasks_.emplace([task]() { (*task)(); });
-    ++task_count_;
-  }
-
-  condition_.notify_one();
-  return future;
 }
-
-}  // namespace dts
-
-#endif  // COMMON_THREAD_POOL_THREAD_POOL_HPP_

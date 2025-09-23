@@ -919,7 +919,7 @@ build _deps/googletest-build/googletest/install/strip: phony _deps/googletest-bu
 build cmake_object_order_depends_target_common: phony || src/common/CMakeFiles/common.dir
 
 build src/common/CMakeFiles/common.dir/src/logger.cpp.o: CXX_COMPILER__common_unscanned_Debug /home/sakura/text/distributed-task-system/src/common/src/logger.cpp || cmake_object_order_depends_target_common
-  DEFINES = -Dcommon_EXPORTS
+  DEFINES = -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -Dcommon_EXPORTS
   DEP_FILE = src/common/CMakeFiles/common.dir/src/logger.cpp.o.d
   FLAGS = -g -std=c++20 -fPIC
   INCLUDES = -I/home/sakura/text/distributed-task-system/src/common/include
@@ -927,7 +927,7 @@ build src/common/CMakeFiles/common.dir/src/logger.cpp.o: CXX_COMPILER__common_un
   OBJECT_FILE_DIR = src/common/CMakeFiles/common.dir/src
 
 build src/common/CMakeFiles/common.dir/src/config.cpp.o: CXX_COMPILER__common_unscanned_Debug /home/sakura/text/distributed-task-system/src/common/src/config.cpp || cmake_object_order_depends_target_common
-  DEFINES = -Dcommon_EXPORTS
+  DEFINES = -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -Dcommon_EXPORTS
   DEP_FILE = src/common/CMakeFiles/common.dir/src/config.cpp.o.d
   FLAGS = -g -std=c++20 -fPIC
   INCLUDES = -I/home/sakura/text/distributed-task-system/src/common/include
@@ -935,7 +935,7 @@ build src/common/CMakeFiles/common.dir/src/config.cpp.o: CXX_COMPILER__common_un
   OBJECT_FILE_DIR = src/common/CMakeFiles/common.dir/src
 
 build src/common/CMakeFiles/common.dir/src/utils.cpp.o: CXX_COMPILER__common_unscanned_Debug /home/sakura/text/distributed-task-system/src/common/src/utils.cpp || cmake_object_order_depends_target_common
-  DEFINES = -Dcommon_EXPORTS
+  DEFINES = -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -Dcommon_EXPORTS
   DEP_FILE = src/common/CMakeFiles/common.dir/src/utils.cpp.o.d
   FLAGS = -g -std=c++20 -fPIC
   INCLUDES = -I/home/sakura/text/distributed-task-system/src/common/include
@@ -943,7 +943,7 @@ build src/common/CMakeFiles/common.dir/src/utils.cpp.o: CXX_COMPILER__common_uns
   OBJECT_FILE_DIR = src/common/CMakeFiles/common.dir/src
 
 build src/common/CMakeFiles/common.dir/src/exceptions.cpp.o: CXX_COMPILER__common_unscanned_Debug /home/sakura/text/distributed-task-system/src/common/src/exceptions.cpp || cmake_object_order_depends_target_common
-  DEFINES = -Dcommon_EXPORTS
+  DEFINES = -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -Dcommon_EXPORTS
   DEP_FILE = src/common/CMakeFiles/common.dir/src/exceptions.cpp.o.d
   FLAGS = -g -std=c++20 -fPIC
   INCLUDES = -I/home/sakura/text/distributed-task-system/src/common/include
@@ -951,7 +951,7 @@ build src/common/CMakeFiles/common.dir/src/exceptions.cpp.o: CXX_COMPILER__commo
   OBJECT_FILE_DIR = src/common/CMakeFiles/common.dir/src
 
 build src/common/CMakeFiles/common.dir/src/thread_pool.cpp.o: CXX_COMPILER__common_unscanned_Debug /home/sakura/text/distributed-task-system/src/common/src/thread_pool.cpp || cmake_object_order_depends_target_common
-  DEFINES = -Dcommon_EXPORTS
+  DEFINES = -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -Dcommon_EXPORTS
   DEP_FILE = src/common/CMakeFiles/common.dir/src/thread_pool.cpp.o.d
   FLAGS = -g -std=c++20 -fPIC
   INCLUDES = -I/home/sakura/text/distributed-task-system/src/common/include
@@ -966,8 +966,9 @@ build src/common/CMakeFiles/common.dir/src/thread_pool.cpp.o: CXX_COMPILER__comm
 #############################################
 # Link the shared library src/common/libcommon.so
 
-build src/common/libcommon.so: CXX_SHARED_LIBRARY_LINKER__common_Debug src/common/CMakeFiles/common.dir/src/logger.cpp.o src/common/CMakeFiles/common.dir/src/config.cpp.o src/common/CMakeFiles/common.dir/src/utils.cpp.o src/common/CMakeFiles/common.dir/src/exceptions.cpp.o src/common/CMakeFiles/common.dir/src/thread_pool.cpp.o
+build src/common/libcommon.so: CXX_SHARED_LIBRARY_LINKER__common_Debug src/common/CMakeFiles/common.dir/src/logger.cpp.o src/common/CMakeFiles/common.dir/src/config.cpp.o src/common/CMakeFiles/common.dir/src/utils.cpp.o src/common/CMakeFiles/common.dir/src/exceptions.cpp.o src/common/CMakeFiles/common.dir/src/thread_pool.cpp.o | /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0
   LANGUAGE_COMPILE_FLAGS = -g
+  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0
   OBJECT_DIR = src/common/CMakeFiles/common.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -1250,6 +1251,7 @@ build src/worker/task-executor/install/strip: phony src/worker/task-executor/CMa
 build cmake_object_order_depends_target_task_test: phony || cmake_object_order_depends_target_common cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
 
 build tests/CMakeFiles/task_test.dir/unit/common-test/task_test.cpp.o: CXX_COMPILER__task_test_unscanned_Debug /home/sakura/text/distributed-task-system/tests/unit/common-test/task_test.cpp || cmake_object_order_depends_target_task_test
+  DEFINES = -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB
   DEP_FILE = tests/CMakeFiles/task_test.dir/unit/common-test/task_test.cpp.o.d
   FLAGS = -g -std=c++20
   INCLUDES = -I/home/sakura/text/distributed-task-system/src/common/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest
@@ -1264,9 +1266,9 @@ build tests/CMakeFiles/task_test.dir/unit/common-test/task_test.cpp.o: CXX_COMPI
 #############################################
 # Link the executable tests/task_test
 
-build tests/task_test: CXX_EXECUTABLE_LINKER__task_test_Debug tests/CMakeFiles/task_test.dir/unit/common-test/task_test.cpp.o | src/common/libcommon.so lib/libgtest_main.so.1.17.0 lib/libgtest.so.1.17.0 || lib/libgtest.so lib/libgtest_main.so src/common/libcommon.so lib/libgtest_main.so lib/libgtest.so
+build tests/task_test: CXX_EXECUTABLE_LINKER__task_test_Debug tests/CMakeFiles/task_test.dir/unit/common-test/task_test.cpp.o | src/common/libcommon.so lib/libgtest_main.so.1.17.0 /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0 lib/libgtest.so.1.17.0 || lib/libgtest.so lib/libgtest_main.so src/common/libcommon.so lib/libgtest_main.so lib/libgtest.so
   FLAGS = -g
-  LINK_LIBRARIES = -Wl,-rpath,/home/sakura/text/distributed-task-system/build/src/common:/home/sakura/text/distributed-task-system/build/lib  src/common/libcommon.so  lib/libgtest_main.so.1.17.0  lib/libgtest.so.1.17.0
+  LINK_LIBRARIES = -Wl,-rpath,/home/sakura/text/distributed-task-system/build/src/common:/home/sakura/text/distributed-task-system/build/lib  src/common/libcommon.so  lib/libgtest_main.so.1.17.0  /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0  lib/libgtest.so.1.17.0
   OBJECT_DIR = tests/CMakeFiles/task_test.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -1283,6 +1285,7 @@ build tests/task_test: CXX_EXECUTABLE_LINKER__task_test_Debug tests/CMakeFiles/t
 build cmake_object_order_depends_target_thread_pool_test: phony || cmake_object_order_depends_target_common cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
 
 build tests/CMakeFiles/thread_pool_test.dir/unit/common-test/thread_pool_test.cpp.o: CXX_COMPILER__thread_pool_test_unscanned_Debug /home/sakura/text/distributed-task-system/tests/unit/common-test/thread_pool_test.cpp || cmake_object_order_depends_target_thread_pool_test
+  DEFINES = -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB
   DEP_FILE = tests/CMakeFiles/thread_pool_test.dir/unit/common-test/thread_pool_test.cpp.o.d
   FLAGS = -g -std=c++20
   INCLUDES = -I/home/sakura/text/distributed-task-system/src/common/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest
@@ -1297,9 +1300,9 @@ build tests/CMakeFiles/thread_pool_test.dir/unit/common-test/thread_pool_test.cp
 #############################################
 # Link the executable tests/thread_pool_test
 
-build tests/thread_pool_test: CXX_EXECUTABLE_LINKER__thread_pool_test_Debug tests/CMakeFiles/thread_pool_test.dir/unit/common-test/thread_pool_test.cpp.o | src/common/libcommon.so lib/libgtest_main.so.1.17.0 lib/libgtest.so.1.17.0 || lib/libgtest.so lib/libgtest_main.so src/common/libcommon.so lib/libgtest_main.so lib/libgtest.so
+build tests/thread_pool_test: CXX_EXECUTABLE_LINKER__thread_pool_test_Debug tests/CMakeFiles/thread_pool_test.dir/unit/common-test/thread_pool_test.cpp.o | src/common/libcommon.so lib/libgtest_main.so.1.17.0 /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0 lib/libgtest.so.1.17.0 || lib/libgtest.so lib/libgtest_main.so src/common/libcommon.so lib/libgtest_main.so lib/libgtest.so
   FLAGS = -g
-  LINK_LIBRARIES = -Wl,-rpath,/home/sakura/text/distributed-task-system/build/src/common:/home/sakura/text/distributed-task-system/build/lib  src/common/libcommon.so  lib/libgtest_main.so.1.17.0  lib/libgtest.so.1.17.0
+  LINK_LIBRARIES = -Wl,-rpath,/home/sakura/text/distributed-task-system/build/src/common:/home/sakura/text/distributed-task-system/build/lib  src/common/libcommon.so  lib/libgtest_main.so.1.17.0  /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0  lib/libgtest.so.1.17.0
   OBJECT_DIR = tests/CMakeFiles/thread_pool_test.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -1339,6 +1342,40 @@ build tests/task_executor_test: CXX_EXECUTABLE_LINKER__task_executor_test_Debug 
   PRE_LINK = :
   TARGET_FILE = tests/task_executor_test
   TARGET_PDB = task_executor_test.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target hazptr_test
+
+
+#############################################
+# Order-only phony target for hazptr_test
+
+build cmake_object_order_depends_target_hazptr_test: phony || cmake_object_order_depends_target_common cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
+
+build tests/CMakeFiles/hazptr_test.dir/unit/common-test/hazptr_test.cpp.o: CXX_COMPILER__hazptr_test_unscanned_Debug /home/sakura/text/distributed-task-system/tests/unit/common-test/hazptr_test.cpp || cmake_object_order_depends_target_hazptr_test
+  DEFINES = -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB
+  DEP_FILE = tests/CMakeFiles/hazptr_test.dir/unit/common-test/hazptr_test.cpp.o.d
+  FLAGS = -g -std=c++20
+  INCLUDES = -I/home/sakura/text/distributed-task-system/src/common/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest/include -isystem /home/sakura/text/distributed-task-system/build/_deps/googletest-src/googletest
+  OBJECT_DIR = tests/CMakeFiles/hazptr_test.dir
+  OBJECT_FILE_DIR = tests/CMakeFiles/hazptr_test.dir/unit/common-test
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target hazptr_test
+
+
+#############################################
+# Link the executable tests/hazptr_test
+
+build tests/hazptr_test: CXX_EXECUTABLE_LINKER__hazptr_test_Debug tests/CMakeFiles/hazptr_test.dir/unit/common-test/hazptr_test.cpp.o | src/common/libcommon.so lib/libgtest_main.so.1.17.0 /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0 lib/libgtest.so.1.17.0 || lib/libgtest.so lib/libgtest_main.so src/common/libcommon.so lib/libgtest_main.so lib/libgtest.so
+  FLAGS = -g
+  LINK_LIBRARIES = -Wl,-rpath,/home/sakura/text/distributed-task-system/build/src/common:/home/sakura/text/distributed-task-system/build/lib  src/common/libcommon.so  lib/libgtest_main.so.1.17.0  /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0  lib/libgtest.so.1.17.0
+  OBJECT_DIR = tests/CMakeFiles/hazptr_test.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = tests/hazptr_test
+  TARGET_PDB = hazptr_test.dbg
 
 
 #############################################
@@ -1454,6 +1491,8 @@ build gtest: phony lib/libgtest.so
 
 build gtest_main: phony lib/libgtest_main.so
 
+build hazptr_test: phony tests/hazptr_test
+
 build hiredis: phony _deps/hiredis-build/libhiredisd.so
 
 build hiredis-test: phony _deps/hiredis-build/hiredis-test
@@ -1537,7 +1576,7 @@ build src/worker/task-executor/all: phony src/worker/task-executor/libtask_execu
 #############################################
 # Folder: /home/sakura/text/distributed-task-system/build/tests
 
-build tests/all: phony tests/task_test tests/thread_pool_test tests/task_executor_test
+build tests/all: phony tests/task_test tests/thread_pool_test tests/task_executor_test tests/hazptr_test
 
 # =============================================================================
 # Built-in targets
