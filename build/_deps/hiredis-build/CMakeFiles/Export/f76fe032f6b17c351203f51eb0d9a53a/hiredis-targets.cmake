@@ -56,7 +56,7 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target hiredis::hiredis
-add_library(hiredis::hiredis SHARED IMPORTED)
+add_library(hiredis::hiredis STATIC IMPORTED)
 
 set_target_properties(hiredis::hiredis PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"

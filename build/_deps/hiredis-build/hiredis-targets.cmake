@@ -47,7 +47,7 @@ unset(_cmake_expected_targets)
 
 
 # Create imported target hiredis::hiredis
-add_library(hiredis::hiredis SHARED IMPORTED)
+add_library(hiredis::hiredis STATIC IMPORTED)
 
 set_target_properties(hiredis::hiredis PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "/home/sakura/text/distributed-task-system/build/_deps/hiredis-src"
@@ -56,8 +56,8 @@ set_target_properties(hiredis::hiredis PROPERTIES
 # Import target "hiredis::hiredis" for configuration "Debug"
 set_property(TARGET hiredis::hiredis APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(hiredis::hiredis PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/sakura/text/distributed-task-system/build/_deps/hiredis-build/libhiredisd.so.1.1.0"
-  IMPORTED_SONAME_DEBUG "libhiredisd.so.1.1.0"
+  IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "C"
+  IMPORTED_LOCATION_DEBUG "/home/sakura/text/distributed-task-system/build/_deps/hiredis-build/libhiredisd.a"
   )
 
 # This file does not depend on other imported targets which have

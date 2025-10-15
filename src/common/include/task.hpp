@@ -8,7 +8,6 @@
 #include <vector>
 
 namespace dts {
-
 enum class TaskState : std::uint8_t {
     PENDING = 0, RUNNING = 1, SUCCESS = 2, FAILED = 3, TIMEOUT = 4, CANCELLED = 5
 };

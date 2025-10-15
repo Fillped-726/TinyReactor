@@ -27,7 +27,7 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 
 include(ExternalProject)
 ExternalProject_Add(hiredis-populate
-                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/redis/hiredis.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "v1.2.0"
+                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/redis/hiredis.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "v1.2.0" "CMAKE_ARGS" "-DBUILD_TESTS=OFF" "-DBUILD_EXAMPLES=OFF"
                     SOURCE_DIR          "/home/sakura/text/distributed-task-system/build/_deps/hiredis-src"
                     BINARY_DIR          "/home/sakura/text/distributed-task-system/build/_deps/hiredis-build"
                     CONFIGURE_COMMAND   ""

@@ -27,7 +27,7 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 
 include(ExternalProject)
 ExternalProject_Add(googletest-populate
-                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/google/googletest.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "v1.17.0"
+                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/google/googletest.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "v1.17.0" "CMAKE_ARGS" "-DBUILD_GMOCK=ON" "-DINSTALL_GTEST=OFF"
                     SOURCE_DIR          "/home/sakura/text/distributed-task-system/build/_deps/googletest-src"
                     BINARY_DIR          "/home/sakura/text/distributed-task-system/build/_deps/googletest-build"
                     CONFIGURE_COMMAND   ""
